@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Randmizer : Age of Craft",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --compilers coffee:coffee-script/register"
   },
   "repository": {
     "type": "git",

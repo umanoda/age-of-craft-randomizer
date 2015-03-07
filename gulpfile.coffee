@@ -15,7 +15,7 @@ gulp.task 'compile:coffee', ->
     .pipe concat 'age-of-craft-randmizer.js'
     .pipe gulp.dest '.'
     .pipe uglify()
-    .pipe concat 'age-of-craft-randmizer.min.js'
+    .pipe concat 'gh-pages/age-of-craft-randmizer.min.js'
     .pipe gulp.dest '.'
 
 gulp.task 'watch', ->
