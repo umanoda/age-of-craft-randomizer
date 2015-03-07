@@ -6,3 +6,11 @@ body{
   border: solid 1px gray;
   padding: 3px; margin: 5px;
 }
+
+.notice{
+  font-size: 80%;
+  color: #666;
+}
+.notice a{
+  color: #33a;
+}
