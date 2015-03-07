@@ -1,0 +1,2 @@
+# Age of Craft ランダマイザ
+
