@@ -15,18 +15,20 @@
     <button id="randmizer" class="pure-button pure-button-primary">生成</button>
   </div>
   <section>
-    <p class='notice'>『Age of Craft』は<a href="http://cd.kyovo.org/">サークル ChickenDiceGames (http://cd.kyovo.org/)</a>から発売しているボードゲームです。</p>
+    <p class='notice'>『Age of Craft』は<a href="http://cd.kyovo.org/">サークル ChickenDiceGames (http://cd.kyovo.org/)</a>さんが発売しているボードゲームです。</p>
   </section>
 
   <script>
     (function(){
       var getRondomize = function(){
-        var aofr = new AgeOfCraft();
-        var res = aofr.randmizer();
+        var aocr = new AgeOfCraft();
         var $setResult = $('<div></div>');
-        $.each(res, function(_idx, data){
+
+        $.each(aocr.randmizer(), function(_idx, data){
           $setResult.append($("<span>"+ data +"</span>"));
         });
+
+        // 結果を描画  
         $("#age-of-craft-random-result").html($setResult);
       };
       $(getRondomize);
