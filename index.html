@@ -1,27 +1,23 @@
 <html>
 <head>
   <meta charset='utf8'>
+  <title>Age of Craft ランダマイザー</title>
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="./style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src='./age-of-craft-randmizer.min.js'></script>
-  <style>
-  <!--
-  body{
-    margin: 10px
-  }
-  #age-of-craft-random-result span{
-    display: inline-block;
-    border: solid 1px gray;
-    padding: 3px; margin: 5px;
-  }
-  -->
   </style>
 </head>
 <body>
+  <h1>Age of Craft ランダマイザー</h1>
   <div id="age-of-craft-random-result"></div>
   <div id="controller">
     <button id="randmizer" class="pure-button pure-button-primary">生成</button>
   </div>
+  <section>
+    <p class='notice'>『Age of Craft』は<a href="http://cd.kyovo.org/">サークル ChickenDiceGames (http://cd.kyovo.org/)</a>から発売しているボードゲームです。</p>
+  </section>
+
   <script>
     (function(){
       var getRondomize = function(){

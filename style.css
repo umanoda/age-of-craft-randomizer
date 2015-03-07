@@ -1,0 +1,8 @@
+body{
+  margin: 10px
+}
+#age-of-craft-random-result span{
+  display: inline-block;
+  border: solid 1px gray;
+  padding: 3px; margin: 5px;
+}
