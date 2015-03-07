@@ -11,11 +11,21 @@
 <body>
   <h1>Age of Craft ランダマイザー</h1>
   <div id="age-of-craft-random-result"></div>
+  <hr>
   <div id="controller">
     <button id="randmizer" class="pure-button pure-button-primary">生成</button>
+    <h2>検索オプション</h2>
+    <div>
+      <ul>
+      <li><label><input type='radio' name="mode" value="random" checked></input>標準ランダム（各系統のカードから数種類ずつチョイス）</label>
+      <li><label><input type='radio' name="mode" value="firstPlay"></input>初回推奨カード</label>
+      <li><label><input type='radio' name="mode" value="chaos"></input>完全ランダム</label>
+      <ul>
+    </div>
   </div>
-  <section>
-    <p class='notice'>『Age of Craft』は<a href="http://cd.kyovo.org/">サークル ChickenDiceGames (http://cd.kyovo.org/)</a>さんが発売しているボードゲームです。</p>
+  <section class="notice">
+    <p>『Age of Craft』は<a href="http://cd.kyovo.org/">サークル ChickenDiceGames (http://cd.kyovo.org/)</a>さんが発売しているボードゲームです。</p>
+    <p><a href="https://github.com/umanoda/age-of-craft-randomizer">Sorce Code - Github</a></p>
   </section>
 
   <script>
@@ -23,6 +33,9 @@
       var getRondomize = function(){
         var aocr = new AgeOfCraft();
         var $setResult = $('<div></div>');
+
+        //mode
+        aocr.setRule({ name: $("input[name='mode']:checked").val() || "random"});
 
         $.each(aocr.randmizer(), function(_idx, data){
           $setResult.append($("<span>"+ data +"</span>"));
