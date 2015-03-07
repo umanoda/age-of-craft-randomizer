@@ -17,9 +17,12 @@
     <h2>検索オプション</h2>
     <div>
       <ul>
-      <li><label><input type='radio' name="mode" value="random" checked></input>標準ランダム（各系統のカードから数種類ずつチョイス）</label>
-      <li><label><input type='radio' name="mode" value="firstPlay"></input>初回推奨カード</label>
-      <li><label><input type='radio' name="mode" value="chaos"></input>完全ランダム</label>
+      <li><label><input type='radio' name="mode" value="random" checked></input>
+          <span class='pure-button'>標準ランダム</span>（各系統のカードから数種類ずつチョイス）</label>
+      <li><label><input type='radio' name="mode" value="firstPlay">
+          </input><span class='pure-button'>初回推奨カード</span></label>
+      <li><label><input type='radio' name="mode" value="chaos"></input>
+          <span class='pure-button'>完全ランダム</span></label>
       <ul>
     </div>
   </div>
@@ -46,6 +49,7 @@
       };
       $(getRondomize);
       $("#randmizer").on('click', getRondomize);
+      $("input[name='mode']").on('change', getRondomize);
     }).call(self)
   </script>
 </body>

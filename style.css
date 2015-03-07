@@ -7,6 +7,23 @@ body{
   padding: 3px; margin: 5px;
 }
 
+ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+input[type="radio"]{visibility: hidden;}
+input[type="radio"] ~ span{
+  color: #444;
+  border: solid 1px white;
+  background-color: #f0f0ff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+input[type="radio"]:checked ~ span{
+  color: blue;
+  background-color: #d0d0ff;
+}
+
 section.notice{
   margin: 20px 0px;
   border-top: 1px solid gray;
