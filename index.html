@@ -19,13 +19,19 @@
     <div>
       <ul>
       <li><label><input type='radio' name="mode" value="random" checked></input>
-          <span class='pure-button'>標準ランダム</span>（各系統のカードから数種類ずつチョイス）</label>
+          <span class='pure-button'>標準ランダム</span>各系統のカードから数種類ずつチョイス</label>
       <li><label><input type='radio' name="mode" value="firstPlay">
           </input><span class='pure-button'>初回推奨カード</span></label>
       <li><label><input type='radio' name="mode" value="chaos"></input>
           <span class='pure-button'>完全ランダム</span></label>
       <ul>
     </div>
+    <h2>拡張ルールの使用</h2>
+    <div>
+      <ul>
+      <li><label><input type='checkbox' name="extend_1" id="extend_1"></input>
+          <span class='pure-button'>#1 設計と来訪</span>「迎賓館」を抜き「社交界」「建築家ギルド」追加</label>
+      </ul>
   </div>
   <section class="notice">
     <p>『Age of Craft』は<a href="http://cd.kyovo.org/">サークル ChickenDiceGames (http://cd.kyovo.org/)</a>さんが発売しているボードゲームです。</p>
@@ -40,9 +46,13 @@
 
         //mode
         aocr.setRule({ name: $("input[name='mode']:checked").val() || "random"});
+        if($("#extend_1:checked").size() > 0){
+          aocr.setRule({extend_1: true});
+        }
 
         $.each(aocr.randmizer(), function(_idx, data){
-          $setResult.append($("<span>"+ data +"</span>"));
+          var sdata = data.split(':');
+          $setResult.append($("<span class='type" + sdata[0] + "'>"+ data +"</span>"));
         });
 
         // 結果を描画  

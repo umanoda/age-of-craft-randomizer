@@ -3,7 +3,7 @@ body{
 }
 #age-of-craft-random-result span{
   display: inline-block;
-  border: solid 1px gray;
+  border: solid 2px silver;
   padding: 3px; margin: 5px;
 }
 
@@ -12,7 +12,7 @@ ul{
   padding-left: 0;
 }
 
-input[type="radio"]{visibility: hidden;}
+input[type="radio"],input[type="checkbox"]{visibility: hidden;}
 input[type="radio"] ~ span{
   color: #444;
   border: solid 1px white;
@@ -22,6 +22,10 @@ input[type="radio"] ~ span{
 input[type="radio"]:checked ~ span{
   color: blue;
   background-color: #d0d0ff;
+}
+input[type="checkbox"]:checked ~ span{
+  color: orangered;
+  background-color: #ffddaa;
 }
 
 section.notice{
@@ -33,3 +37,10 @@ section.notice{
 .notice a{
   color: #33a;
 }
+
+/* カード種類ごとの色分け */
+.typeA{border-color: red !important;}
+.typeD{border-color: gray !important;}
+.typeL{border-color: orange !important;}
+.typeN{border-color: violet !important;}
+.typeC{border-color: blue !important;}
