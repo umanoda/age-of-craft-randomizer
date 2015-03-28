@@ -44,3 +44,7 @@ section.notice{
 .typeL{border-color: orange !important;}
 .typeN{border-color: violet !important;}
 .typeC{border-color: blue !important;}
+
+.button-xlarge{
+  font-size: 125%;
+}
